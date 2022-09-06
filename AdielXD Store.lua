@@ -3,6 +3,7 @@
 bb = 0
 
 iaps = {
+	"Fechar Script",
 	"Starter pack",
 	"Office Cape",
 	"Santa Hat",
@@ -64,10 +65,10 @@ iaps = {
 	"Runaway Pack",
 	"Aurora Instrument",
 	"Aurora Cape",
-	"Orange Dress",
-	"Fechar Script"
+	"Orange Dress"
 }
 SNC = {
+	":SPASSR",
 	":SNC00",
 	":SNC01",
 	":SNC03",
@@ -130,13 +131,12 @@ SNC = {
 	":SNC65",
 	":SNC66",
 	":SNC67"
-
 }
 
 function Main()
 local Choice = gg.choice(iaps,nil,"Open the store to buy")
 codigoIap = SNC[Choice]
-if Choice == 63 then os.exit()
+if Choice == 1 then os.exit()
 	elseif bb == 1 then IAP1()
 	else IAP() end
 end
