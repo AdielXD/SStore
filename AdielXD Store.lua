@@ -1,9 +1,12 @@
 --Script feito com a ajuda do meus amigos kiojeen e Aklads
 
+gg.alert('after you buy something, if you select other IAP, will appear the Season Pass in store'\n'and if you buy this season pass, the next item you have selected will appear')
+gg.alert('so, if you are playing on live, I advise you to restart the game after buy something')
+
 bb = 0
 
 iaps = {
-	"Fechar Script",
+	"Close Script",
 	"Starter pack",
 	"Office Cape",
 	"Santa Hat",
