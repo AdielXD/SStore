@@ -1,3 +1,5 @@
+--Script feito com a ajuda do meus amigos kiojeen e Aklads
+
 bb = 0
 
 iaps = {
