@@ -133,7 +133,7 @@ SNC = {
 	":SNC67"
 }
 
-function alrta()
+function Alrta()
 	gg.alert(
 	[[after you buy something, if you select other IAP, will appear the Season Pass in store
 	and if you buy this season pass, the next item you have selected will appear]])
