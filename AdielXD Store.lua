@@ -146,7 +146,7 @@ gg.alert(
 function Main()
 local Choice = gg.choice(iaps,nil,"Open the store to buy")
 codigoIap = SNC[Choice]
-if Choice ~= nil then
+if Choice == nil then
 	Main()
 end
 gg.toast(iaps[Choice])
