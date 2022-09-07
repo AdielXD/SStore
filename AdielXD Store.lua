@@ -148,12 +148,12 @@ local Choice = gg.choice(iaps,nil,"Open the store to buy")
 codigoIap = SNC[Choice]
 if Choice ~= nil then
 	Main()
-elseif Choice == 1 then
+end
+gg.toast(iaps[Choice])
+end
+if Choice == 1 then
 	os.exit()
-end
-gg.toast(local sla = iaps[Choice])
-end
-if bb == 1 then IAP1()
+elseif bb == 1 then IAP1()
 	else IAP()
 end
 
