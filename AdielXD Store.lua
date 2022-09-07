@@ -144,11 +144,11 @@ gg.alert(
 function Main()
 local Choice = gg.choice(iaps,nil,"Open the store to buy")
 codigoIap = SNC[Choice]
-end
 if Choice == 1 then
 	os.exit()
 elseif bb == 1 then IAP1()
 	else IAP()
+end
 end
 
 function IAP()
