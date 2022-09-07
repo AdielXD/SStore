@@ -153,7 +153,7 @@ end
 
 function IAP()
     gg.clearResults()
-    gg.setRanges(gg.REGION_OTHER|gg.REGION_C_ALLOC)
+    gg.setRanges(gg.REGION_C_ALLOC)
     gg.searchNumber(':SPASS', 1,false,gg.SIGN_EQUAL,0, -1)
     gg.getResults(1000)
     gg.editAll('0', 1)
