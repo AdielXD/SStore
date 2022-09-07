@@ -141,10 +141,12 @@ SNC = {
 function Main()
 local Choice = gg.choice(iaps,nil,"Open the store to buy")
 gg.toast(Choice)
-if Choice == nil then
-	Main()
-end
 codigoIap = SNC[Choice]
+while Choice == nil do
+    if gg.isVisible() then
+      gg.setVisible(false)
+      Main() end
+    end
 if Choice == 1 then os.exit()
 	elseif bb == 1 then IAP1()
 	else IAP() end
