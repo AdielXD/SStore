@@ -1,6 +1,6 @@
 --Script feito com a ajuda do meus amigos kiojeen e Aklads
 
-bb = 0
+bb = nil
 
 iaps = {
 	"Close Script",
@@ -133,7 +133,7 @@ SNC = {
 	":SNC67"
 }
 
-function Alrta()
+--function Alrta()
 gg.alert(
 	[[after you buy something, if you select other IAP, will appear the Season Pass in store
 	and if you buy this season pass, the next item you have selected will appear]]
@@ -141,17 +141,17 @@ gg.alert(
 gg.alert(
 	[[so, if you are playing on live, I advise you to restart the game after buy something]]
 )
-end
+--end
 
 function Main()
 local Choice = gg.choice(iaps,nil,"Open the store to buy")
 codigoIap = SNC[Choice]
 if Choice ~= nil then
-	alrta()
+	Main()
 elseif Choice == 1 then
 	os.exit()
 end
-gg.toast(iaps[Choice])
+gg.toast(local sla = iaps[Choice])
 end
 if bb == 1 then IAP1()
 	else IAP()
