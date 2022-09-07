@@ -1,10 +1,5 @@
 --Script feito com a ajuda do meus amigos kiojeen e Aklads
 
-function alerta()
-	gg.alert('after you buy something, if you select other IAP, will appear the Season Pass in store'\n'and if you buy this season pass, the next item you have selected will appear')
-	gg.alert('so, if you are playing on live, I advise you to restart the game after buy something')
-	end
-
 bb = 0
 
 iaps = {
@@ -137,6 +132,11 @@ SNC = {
 	":SNC66",
 	":SNC67"
 }
+
+function alerta()
+	gg.alert('after you buy something, if you select other IAP, will appear the Season Pass in store'\n'and if you buy this season pass, the next item you have selected will appear')
+	gg.alert('so, if you are playing on live, I advise you to restart the game after buy something')
+	end
 
 function Main()
 local Choice = gg.choice(iaps,nil,"Open the store to buy")
