@@ -133,28 +133,28 @@ SNC = {
 	":SNC67"
 }
 
---function alerta()
-	--gg.alert('after you buy something, if you select other IAP, will appear the Season Pass in store'\n'and if you buy this season pass, the next item you have selected will appear')
-	--gg.alert('so, if you are playing on live, I advise you to restart the game after buy something')
-	--end
+gg.alert(
+	[[after you buy something, if you select other IAP, will appear the Season Pass in store 
+	and if you buy this season pass, the next item you have selected will appear]])
+gg.alert([[so, if you are playing on live, I advise you to restart the game after buy something]])
 
 function Main()
 local Choice = gg.choice(iaps,nil,"Open the store to buy")
-gg.toast(Choice)
 codigoIap = SNC[Choice]
-while Choice == nil do
-    if gg.isVisible() then
-      gg.setVisible(false)
-      Main() end
-    end
-if Choice == 1 then os.exit()
-	elseif bb == 1 then IAP1()
-	else IAP() end
+if Choice ~= nil then
+	Main()
+elseif Choice == 1 then
+	os.exit()
+end
+gg.toast(iaps[Choice])
+end
+if bb == 1 then IAP1()
+	else IAP()
 end
 
 function IAP()
     gg.clearResults()
-    gg.setRanges(gg.REGION_CODE_APP)
+    gg.setRanges(gg.REGION_OTHER|gg.REGION_C_ALLOC)
     gg.searchNumber(':SPASS', gg.TYPE_BYTE,false,gg.SIGN_EQUAL,0, -1)
     gg.getResults(1000)
     gg.editAll('0',gg.TYPE_BYTE)
