@@ -133,16 +133,18 @@ SNC = {
 	":SNC67"
 }
 
-gg.alert(
-	[[after you buy something, if you select other IAP, will appear the Season Pass in store 
+function alrta()
+	gg.alert(
+	[[after you buy something, if you select other IAP, will appear the Season Pass in store
 	and if you buy this season pass, the next item you have selected will appear]])
-gg.alert([[so, if you are playing on live, I advise you to restart the game after buy something]])
+	gg.alert([[so, if you are playing on live, I advise you to restart the game after buy something]])
+end
 
 function Main()
 local Choice = gg.choice(iaps,nil,"Open the store to buy")
 codigoIap = SNC[Choice]
 if Choice ~= nil then
-	Main()
+	alrta()
 elseif Choice == 1 then
 	os.exit()
 end
@@ -155,19 +157,19 @@ end
 function IAP()
     gg.clearResults()
     gg.setRanges(gg.REGION_OTHER|gg.REGION_C_ALLOC)
-    gg.searchNumber(':SPASS', gg.TYPE_BYTE,false,gg.SIGN_EQUAL,0, -1)
+    gg.searchNumber(':SPASS', 1,false,gg.SIGN_EQUAL,0, -1)
     gg.getResults(1000)
-    gg.editAll('0',gg.TYPE_BYTE)
+    gg.editAll('0', 1)
     gg.clearResults()
     gg.setRanges(gg.REGION_C_ALLOC)
-    gg.searchNumber(':SPASSR', gg.TYPE_BYTE,false,gg.SIGN_EQUAL,0, -1)
+    gg.searchNumber(':SPASSR', 1,false,gg.SIGN_EQUAL,0, -1)
     gg.getResults(1000)
-    gg.editAll(codigoIap,gg.TYPE_BYTE)
+    gg.editAll(codigoIap, 1)
 	bb = 1
 end
 
 function IAP1()
-	gg.editAll(codigoIap,gg.TYPE_BYTE)
+	gg.editAll(codigoIap, 1)
 end
 
 print[[
