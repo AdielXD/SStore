@@ -171,7 +171,7 @@ end
 
 print[[
 	
-	By AdielXD
+	By Okarin#4708
 	
 	]]
 
