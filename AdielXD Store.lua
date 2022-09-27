@@ -1,5 +1,6 @@
 --Script feito com a ajuda do meus amigos kiojeen e Aklads
 
+MTD1 = nil
 bb = nil
 
 iaps = {}
@@ -274,7 +275,17 @@ gg.alert(
 )
 
 function Main()
-	local adxd = {"method 1","method 2","exit"}
+	if MTD1 == 1 then
+		mtd2()
+	end
+	gg.alert(
+	[[
+		Ok, we have 2 options,
+		option 1 will load all Store iap that isn't hidden,
+		option 2 will open a list to buy any IAP u want
+	]]
+	)
+	local adxd = {"Store only (Live only)","All IAPs in a list (Live and beta)","Exit"}
 	local Choice = gg.choice(adxd,nil,'choose one method to start')
 	if Choice == 1 then
 		mtd1()
@@ -297,6 +308,8 @@ function mtd1 ()
     gg.searchNumber(':global', 1,false,gg.SIGN_EQUAL,0, -1)
     gg.getResults(1000)
     gg.editAll('0', 1)
+	gg.toast("Open The Store")
+	MTD1 = 1
 end
 
 function mtd2 ()
@@ -320,11 +333,13 @@ function IAP()
     gg.searchNumber(':SPASSR', 1,false,gg.SIGN_EQUAL,0, -1)
     gg.getResults(1000)
     gg.editAll(codigoIap, 1)
+	gg.toast("Open The Store")
 	bb = 1
 end
 
 function IAP1()
 	gg.editAll(codigoIap, 1)
+	gg.toast("Open The Store")
 end
 
 print[[
