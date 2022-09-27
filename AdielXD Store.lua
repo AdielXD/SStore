@@ -276,13 +276,18 @@ gg.alert(
 
 function Main()
 	if MTD1 == 1 then
-		mtd2()
+		os.exit()
 	end
 	gg.alert(
 	[[
 		Ok, we have 2 options,
 		option 1 will load all Store iap that isn't hidden,
 		option 2 will open a list to buy any IAP u want
+	]]
+	)
+	gg.alert(
+	[[
+		DON'T run the script again after use "Store Only" option. if u wanna open the IAP list, restart the game
 	]]
 	)
 	local adxd = {"Store only (Live only)","All IAPs in a list (Live and beta)","Exit"}
