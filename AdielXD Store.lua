@@ -274,11 +274,14 @@ gg.alert(
 )
 
 function Main()
-	local Choice = gg.choice("method 1","method 2","choose one method to start")
+	local adxd = {"method 1","method 2","exit"}
+	local Choice = gg.choice(adxd,nil,'choose one method to start')
 	if Choice == 1 then
 		mtd1()
-	else
+	elseif Choice == 2 then
 		mtd2()
+	elseif Choice == 3 then
+		os.exit()
 	end
 
 end
