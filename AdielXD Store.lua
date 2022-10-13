@@ -259,6 +259,14 @@ iapc = {
 	"Orange Dress",
 	":SNC67",
  },
+ {
+	"Hermit Fluffy Cape",
+	":SNC68",
+ },
+ {
+	"Skyball Set",
+	":SNC69",
+ },
 }
 
 for i, v in ipairs(iapc) do
