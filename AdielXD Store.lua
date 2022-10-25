@@ -1,4 +1,5 @@
 --Script feito com a ajuda do meus amigos kiojeen e Aklads
+--edição foda de teste
 
 MTD1 = nil
 bb = nil
